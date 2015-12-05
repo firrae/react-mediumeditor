@@ -1,6 +1,7 @@
 # react-mediumeditor
 MediumEditor wrapped up in a ReactJS component.
 
+##Overview
 This will create a MediumEditor based on the [mediumeditor:mediumeditor](https://github.com/yabwe/medium-editor) package wherever you use <MediumEditorComp />. The component recieves a set of different options including: 
 * Toolbar - toolbar
 * Anchor - anchor
