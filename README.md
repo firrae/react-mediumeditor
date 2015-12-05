@@ -11,6 +11,9 @@ This will create a MediumEditor based on the [mediumeditor:mediumeditor](https:/
 * Paste - paste
 * KeyboardCommands - keyboardCommands
 
+## Accessing the text in the editor
+To retrieve the text from the editor simply use the following: ``` $('.editable').html() ```
+
 ## Adding it to your project
 ```
 meteor add firrae:react-mediumeditor
