@@ -2,20 +2,20 @@
 Package.describe({
   name: 'firrae:react-mediumeditor',
   summary: 'MediumEditor wrapped up in a ReactJS component.',
-  version: '0.1.0',
+  version: '0.1.3',
   git: 'https://github.com/firrae/react-mediumeditor',
   documentation: 'README.md'
 });
 
 Package.onUse(function (api) {
-  api.versionsFrom('METEOR@1.2.0');
+  api.versionsFrom('METEOR@1.2.1');
 
   api.use([
     "ecmascript",
     "less",
     "jquery",
     "mediumeditor:mediumeditor",
-    "react@0.1.13'"
+    "react"
   ], ['client','server']);
 
   api.addFiles([
