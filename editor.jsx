@@ -18,7 +18,7 @@ MediumEditorComp = React.createClass({
   },
   render() {
     return(
-      <div className="editable" contentEditable="true" spellCheck="true" role="textbox" aria-multiline="true"></div>
+      <textarea className="editable" contentEditable="true" spellCheck="true" role="textbox" aria-multiline="true" />
     );
   }
 });
