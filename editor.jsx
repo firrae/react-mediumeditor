@@ -7,7 +7,12 @@ MediumEditorComp = React.createClass({
   componentDidMount() {
     let editor = new MediumEditor('.editable', {
       toolbar: this.props.toolbar,
-      anchor: this.props.anchor
+      anchor: this.props.anchor,
+      anchorPreview: this.props.anchorPreview,
+      placeholder: this.props.placeholder,
+      anchorForm: this.props.anchorForm,
+      paste: this.props.paste,
+      keyboardCommands: this.props.keyboardCommands
     });
     console.log(editor);
   },

@@ -2,12 +2,13 @@
 MediumEditor wrapped up in a ReactJS component.
 
 This will create a MediumEditor based on the [mediumeditor:mediumeditor](https://github.com/yabwe/medium-editor) package wherever you use <MediumEditorComp />. The component recieves a set of different options including: 
-* Toolbar
-* Anchor
-* Placeholder
-* Anchor Form
-* Paste
-* KeyboardCommands
+* Toolbar - toolbar
+* Anchor - anchor
+* Anchor Preview - anchorPreview
+* Placeholder - placeholder
+* Anchor Form - anchorForm
+* Paste - paste
+* KeyboardCommands - keyboardCommands
 
 ##Toolbar
 The component will take in all the same options that the standard editor will under the toolbar object, simply pass an object containing the settings you want and it'll be passed to the editor. For example:
@@ -88,3 +89,4 @@ Component = React.createClass({
     </div>
   }
 ```
+Each of the named options at the top act the same way and offer the options [here](https://github.com/yabwe/medium-editor/blob/master/OPTIONS.md). If you notice something not working feel free to submit an issue or pull request and I'll get to it when I can.
