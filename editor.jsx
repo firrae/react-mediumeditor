@@ -14,11 +14,10 @@ MediumEditorComp = React.createClass({
       paste: this.props.paste,
       keyboardCommands: this.props.keyboardCommands
     });
-    console.log(editor);
   },
   render() {
     return(
-      <textarea className="editable" contentEditable="true" spellCheck="true" role="textbox" aria-multiline="true" />
+      <div className="editable" contentEditable="true" spellCheck="true" role="textbox" aria-multiline="true"></div>
     );
   }
 });

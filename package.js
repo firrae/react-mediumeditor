@@ -2,7 +2,7 @@
 Package.describe({
   name: 'firrae:react-mediumeditor',
   summary: 'MediumEditor wrapped up in a ReactJS component.',
-  version: '0.1.5',
+  version: '0.1.7',
   git: 'https://github.com/firrae/react-mediumeditor',
   documentation: 'README.md'
 });
