@@ -65,7 +65,7 @@ MediumEditorComp = React.createClass({
         spellCheck="true"
         role="textbox"
         aria-multiline="true"
-        dangerouslySetInnerHTML={ { __html : instance.props.text } }
+        dangerouslySetInnerHTML={ { __html : instance.props.defaultValue } }
         style={ this.props.style }
         {...this.props.other}
         />
