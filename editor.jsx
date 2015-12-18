@@ -1,11 +1,17 @@
 MediumEditorComp = React.createClass({
-  getInitialState() {
+  //Get the default Properties
+  //We are setting edit by default to true
+  getDefaultProps () {
     return {
-
-    }
+      edit : true
+    };
   },
-  componentDidMount() {
-    let editor = new MediumEditor('.editable', {
+
+  //Init the medium editor and create a reference
+  //Within our component instance
+  initMedium () {
+    let instance = this;
+    instance.medium = new MediumEditor(instance.refs.editor, {
       toolbar: this.props.toolbar,
       anchor: this.props.anchor,
       anchorPreview: this.props.anchorPreview,
@@ -14,10 +20,55 @@ MediumEditorComp = React.createClass({
       paste: this.props.paste,
       keyboardCommands: this.props.keyboardCommands
     });
+
+    //Subscribe to changes and if there is a callback call it
+    instance.medium.subscribe('editableInput', function (event, editor) {
+      if(typeof instance.props.onChange === 'function') {
+        instance.props.onChange(event, instance.refs.editor.innerHTML);
+      }
+    });
   },
+
+  //Allow us to toggle the medium editor
+  toggleMediumEditor () {
+    if(this.props.edit) {
+      this.initMedium();
+    } else if(this.medium) {
+      this.medium.destroy();
+    }
+  },
+
+  //On mount toggle the editor based on the edit prop
+  componentDidMount() {
+    this.toggleMediumEditor();
+  },
+
+  //When the component is unmounted destroy the
+  //Non-isomorphic component
+  componentWillUnmount () {
+    this.medium.destroy();
+  },
+
+  //Toggle the editor when something updates
+  componentDidUpdate () {
+    this.toggleMediumEditor();
+  },
+
+  //Render our component
   render() {
+    let instance = this;
     return(
-      <div className="editable" contentEditable="true" spellCheck="true" role="textbox" aria-multiline="true"></div>
+      <div
+        ref="editor"
+        className="editable"
+        contentEditable="true"
+        spellCheck="true"
+        role="textbox"
+        aria-multiline="true"
+        dangerouslySetInnerHTML={ { __html : instance.props.text } }
+        style={ this.props.style }
+        {...this.props.other}
+        />
     );
   }
 });
