@@ -46,7 +46,8 @@ MediumEditorComp = React.createClass({
   //When the component is unmounted destroy the
   //Non-isomorphic component
   componentWillUnmount () {
-    this.medium.destroy();
+    if(this.medium)
+      this.medium.destroy();
   },
 
   //Toggle the editor when something updates
