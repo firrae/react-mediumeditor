@@ -31,6 +31,7 @@ MediumEditorComp = React.createClass({
 
   //Allow us to toggle the medium editor
   toggleMediumEditor () {
+    console.log('toggle');
     if(this.props.edit) {
       this.initMedium();
     } else if(this.medium) {
@@ -50,9 +51,14 @@ MediumEditorComp = React.createClass({
       this.medium.destroy();
   },
 
+  //Check if we should update
+  shouldComponentUpdate (nextProps, nextState) {
+    return nextProps.edit !== this.props.edit;
+  },
+
   //Toggle the editor when something updates
-  componentDidUpdate () {
-    this.toggleMediumEditor();
+  componentDidUpdate (prevProps, prevState) {
+      this.toggleMediumEditor();
   },
 
   //Render our component
