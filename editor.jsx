@@ -11,6 +11,7 @@ MediumEditorComp = React.createClass({
   //Within our component instance
   initMedium () {
     let instance = this;
+
     instance.medium = new MediumEditor(instance.refs.editor, {
       toolbar: this.props.toolbar,
       anchor: this.props.anchor,
@@ -67,7 +68,6 @@ MediumEditorComp = React.createClass({
       <div
         ref="editor"
         className="editable"
-        contentEditable="true"
         spellCheck="true"
         role="textbox"
         aria-multiline="true"
