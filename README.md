@@ -21,7 +21,7 @@ This will create a MediumEditor based on the [mediumeditor:mediumeditor](https:/
 * Other - other - this will take in an object and set them as values on the div of the editor
 
 ## Accessing the text in the editor
-To retrieve the text from the editor simply use the following: ``` $('.editable').html() ```. If you need multiple editors then you can pass along other parameters to the div like so: ``` <MarkdownEditor other="{{data-key: 1}}" /> ``` and access it in a similar jQuery fashion.
+To retrieve the text from the editor simply use the following: ``` $('.editable').html() ```. If you need multiple editors then you can pass along other parameters to the div like so: ``` <MediumEditorComp other="{{data-key: 1}}" /> ``` and access it in a similar jQuery fashion.
 
 ## Toolbar
 The component will take in all the same options that the standard editor will under the toolbar object, simply pass an object containing the settings you want and it'll be passed to the editor. For example:
@@ -107,7 +107,7 @@ Component = React.createClass({
 
 ## Other
 
-You can pass along extra parameters to the div that holds the editor through the "other" prop like so: ``` <MarkdownEditor other="{{data-key: 1}}" /> ```. They will appear in the DOM as ``` <div ... data-key="1" ```
+You can pass along extra parameters to the div that holds the editor through the "other" prop like so: ``` <MediumEditorComp other="{{data-key: 1}}" /> ```. They will appear in the DOM as ``` <div ... data-key="1" ```
 
 ## Extra Options
 
