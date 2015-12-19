@@ -16,7 +16,6 @@ MediumEditorComp = React.createClass({
       anchor: this.props.anchor,
       anchorPreview: this.props.anchorPreview,
       placeholder: this.props.placeholder,
-      anchorForm: this.props.anchorForm,
       paste: this.props.paste,
       keyboardCommands: this.props.keyboardCommands
     });
