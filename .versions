@@ -8,7 +8,7 @@ cosmos:browserify@0.8.4
 ecmascript@0.1.6
 ecmascript-runtime@0.2.6
 ejson@1.0.7
-firrae:react-mediumeditor@0.1.7
+firrae:react-mediumeditor@0.1.8
 jquery@1.11.4
 jsx@0.2.3
 less@2.5.1

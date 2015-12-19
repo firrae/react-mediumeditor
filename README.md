@@ -17,11 +17,23 @@ This will create a MediumEditor based on the [mediumeditor:mediumeditor](https:/
 * [Keyboard Commands](https://github.com/yabwe/medium-editor#keyboardcommands-options) - keyboardCommands
 * Default Value - defaultValue
 * Style - style - Pass through the style you wish to apply to the div the editor resides in
-* Edit - edit - True or False, this will turn the editor on or off
+* Disable Editor - edit - True or False, this will turn the editor on or off
 * Other - other - this will take in an object and set them as values on the div of the editor
 
 ## Accessing the text in the editor
-To retrieve the text from the editor simply use the following: ``` $('.editable').html() ```. If you need multiple editors then you can pass along other parameters to the div like so: ``` <MediumEditorComp other="{{data-key: 1}}" /> ``` and access it in a similar jQuery fashion.
+The simpliest method to retrieve the text from the editor simply use the following: ``` $('.editable').html() ```. If you need multiple editors then you can pass along other parameters to the div like so: ``` <MediumEditorComp other="{{data-key: 1}}" /> ``` and access it in a similar jQuery fashion.
+If you need a mode dynamic way you can pass though a function prop that will fire onChange:
+
+```
+changeEvent(event, returnedText) {
+    console.log(returnedText);
+},
+render() {
+    return(
+        <MediumEditorComp onChange={this.changeEvent} />
+    );
+}
+```
 
 ## Toolbar
 The component will take in all the same options that the standard editor will under the toolbar object, simply pass an object containing the settings you want and it'll be passed to the editor. For example:
