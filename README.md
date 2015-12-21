@@ -22,6 +22,7 @@ This will create a MediumEditor based on the [mediumeditor:mediumeditor](https:/
 
 ## Accessing the text in the editor
 The simpliest method to retrieve the text from the editor simply use the following: ``` $('.editable').html() ```. If you need multiple editors then you can pass along other parameters to the div like so: ``` <MediumEditorComp other="{{data-key: 1}}" /> ``` and access it in a similar jQuery fashion.
+
 If you need a mode dynamic way you can pass though a function prop that will fire onChange:
 
 ```
