@@ -1,4 +1,6 @@
 [![Codacy Badge](https://api.codacy.com/project/badge/grade/6b012115bfb34a8cb3a19e1dbfa8b49b)](https://www.codacy.com/app/firrae/react-mediumeditor)
+# This package is now depreciated. Please use proper NPM modules in Meteor now.
+
 # react-mediumeditor
 MediumEditor wrapped up in a ReactJS component.
 
